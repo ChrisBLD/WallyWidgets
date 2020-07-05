@@ -34,6 +34,9 @@ function getQuantities($widgetsOrdered) {
 
 }
 
+if (!is_numeric($_POST["widgets"])) {
+	exit("Invalid Request. Please enter a valid number with NO COMMAS e.g. 20,000 -> 20000");
+}
 getQuantities($_POST["widgets"]);
 
 
