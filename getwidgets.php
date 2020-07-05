@@ -1,9 +1,4 @@
 <?php
-//Enter number of widgets to be ordered
-//Take number, subtract max widget package from it.
-//less than 0? yes: undo and try again with next lowest package. no: tally 1 and repeat.
-//return tally
-
 $packSizes = array(5000,2000,1000,500,250);
 $quantities = array(0,0,0,0,0);
 $max = count($packSizes)-1;
@@ -15,9 +10,6 @@ function getQuantities($widgetsOrdered) {
 	
 	global $packSizes, $quantities, $max;
 	
-	//echo $index+1;
-	//echo count($packSizes);
-
 
 	while ($control) {
 		if ($widgetsOrdered - $packSizes[$index] > 0) { //Repeatedly called until widgetsOrdered is less than the current max pack size
